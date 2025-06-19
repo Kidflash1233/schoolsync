@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Management Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Core interactive color
+            primary: {
+              DEFAULT: '#334155', // slate-700
+              hover: '#1e293b',   // slate-800
+              text: '#f8fafc'     // slate-50 (light text for dark primary bg)
+            },
+            // For less prominent actions or outlines
+            secondary: {
+              DEFAULT: '#e2e8f0', // slate-200 (light bg for secondary button)
+              hover: '#cbd5e1',   // slate-300
+              text: '#334155',    // slate-700 (dark text for light secondary bg)
+              border: '#94a3b8'   // slate-400
+            },
+            // Backgrounds
+            bgPage: '#f8fafc',    // slate-50 -> main page background
+            bgSurface: '#ffffff', // white -> cards, modals
+            bgMuted: '#f1f5f9',   // slate-100 -> for subtle hover or differentiation
+            // Text
+            textDisplay: '#1e293b',  // slate-800 -> headings, prominent text
+            textBody: '#334155',     // slate-700 -> regular text
+            textSubtle: '#64748b',    // slate-500 -> subtle text, placeholders
+            textDisabled: '#94a3b8', // slate-400 -> disabled text
+            textOnPrimary: '#f8fafc', // slate-50 (text on primary button)
+            textOnSecondary: '#334155', // slate-700 (text on secondary button)
+            // Borders
+            borderLight: '#e2e8f0',  // slate-200
+            borderDefault: '#cbd5e1', // slate-300
+            borderDark: '#94a3b8',   // slate-400
+            // Functional Colors
+            success: {
+              DEFAULT: '#22c55e', // green-500
+              bgLight: '#f0fdf4', // green-50
+              text: '#ffffff',    // text on DEFAULT success
+              textDark: '#166534', // For text on bgLight success
+              borderLight: '#bbf7d0' // green-200
+            },
+            danger: {
+              DEFAULT: '#ef4444', // red-500
+              bgLight: '#fef2f2', // red-50
+              text: '#ffffff',    // text on DEFAULT danger
+              textDark: '#991b1b', // For text on bgLight danger
+              borderLight: '#fecaca' // red-200
+            },
+            warning: {
+              DEFAULT: '#f59e0b', // amber-500
+              bgLight: '#fffbeb', // amber-50
+              text: '#1e293b',    // text on DEFAULT warning (dark for amber)
+              textDark: '#b45309', // For text on bgLight warning
+              borderLight: '#fde68a' // amber-200
+            },
+            // Navigation specific
+            navActiveBg: '#e2e8f0',   // slate-200
+            navActiveText: '#1e293b', // slate-800 (textDisplay)
+            navHoverBg: '#f1f5f9',    // slate-100 (bgMuted)
+            navText: '#475569',       // slate-600 (slightly lighter than textBody for nav items)
+            navIcon: '#64748b'        // slate-500 (textSubtle)
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "react-select": "https://esm.sh/react-select@^5.8.0",
+    "@heroicons/react": "https://esm.sh/@heroicons/react@^2.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-bgPage text-textBody overflow-x-hidden">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
